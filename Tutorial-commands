@@ -1,0 +1,47 @@
+Clone blockchain repo from github:
+git clone https://github.com/vanja032/inery-chain.git
+sudo chmod +x *
+
+
+Blockchain:
+nano .bashrc
+ 	export PATH="<path_to_project>/blockchain-full-stack-app/inery-chain/inery-chain/inery/bin:$PATH"
+	export PATH="<path_to_project>/blockchain-full-stack-app/inery-chain/inery-chain/inery.cdt/bin:$PATH"
+
+chmod +x start.sh
+
+./start.sh
+
+tail -f blockchain/nodine.log
+
+pkill nodine
+
+cline get info
+
+
+
+Project:
+Blockchain value contract(C++):
+inery-cpp -abigen webshop.cpp -o webshop.wasm
+cline create key --to-console
+cline wallet unlock --password <wallet_password>
+cline wallet import --private-key <account_private_key>
+cline create account inery webshop <account_public_key> <account_public_key>
+cline get account webshop --json
+cline set contract webshop ./ webshop.wasm webshop.abi
+cline get abi webshop
+
+
+
+Backend(NodeJs):
+npm init
+touch server.js
+npm install --save nodemon
+npm install --save morgan
+npm install --save body-parser
+npm install --save https://github.com/inery-blockchain/ineryjs.git
+
+
+Frontend(ReactJs):
+
+
