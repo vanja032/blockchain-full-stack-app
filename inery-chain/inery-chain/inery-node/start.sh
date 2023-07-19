@@ -20,6 +20,7 @@ nodine \
   --data-dir $DATADIR"/data" \
   --blocks-dir $DATADIR"/blocks" \
   --config-dir $DATADIR"/config" \
+  --hard-replay-blockchain \
   --enable-stale-production \
   --access-control-allow-origin=* \
   --contracts-console \

@@ -8,6 +8,9 @@ void webshop::signup(inery::name username, const std::string password_hash,
 
   users_t users(get_self(), get_self().value);
 
+  auto user_it = users.find(username.value);
+  check(user_it == users.end(), "User with that username already exists");
+
   users.emplace(get_self(), [&](user &user) {
     user.username = username;
     user.password_hash = password_hash;

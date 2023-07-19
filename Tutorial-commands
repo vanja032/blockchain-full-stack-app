@@ -18,6 +18,8 @@ pkill nodine
 
 cline get info
 
+Flag: --hard-replay-blockchain \
+
 
 
 Project:
@@ -26,7 +28,7 @@ inery-cpp -abigen webshop.cpp -o webshop.wasm
 cline create key --to-console
 cline wallet unlock --password <wallet_password>
 cline wallet import --private-key <account_private_key>
-cline create account inery webshop <account_public_key> <account_public_key>
+cline create newaccount inery webshop <account_public_key> <account_public_key>
 cline get account webshop --json
 cline set contract webshop ./ webshop.wasm webshop.abi
 cline get abi webshop
@@ -39,9 +41,18 @@ touch server.js
 npm install --save nodemon
 npm install --save morgan
 npm install --save body-parser
+npm install --save dotenv
 npm install --save https://github.com/inery-blockchain/ineryjs.git
 
 
 Frontend(ReactJs):
+
+
+
+Github:
+git clone <repository url>
+git add .
+git commit -m "New commit message"
+git push -u origin main (If "main" is your branch)
 
 
