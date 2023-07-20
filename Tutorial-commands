@@ -42,10 +42,19 @@ npm install --save nodemon
 npm install --save morgan
 npm install --save body-parser
 npm install --save dotenv
+npm install --save cors
 npm install --save https://github.com/inery-blockchain/ineryjs.git
 
 
 Frontend(ReactJs):
+npm create vite@latest
+npm install
+npm run dev
+npm install bootstrap
+npm install jquery
+npm install axios
+npm install react-router-dom
+npm install crypto-js
 
 
 

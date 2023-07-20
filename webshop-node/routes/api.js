@@ -25,10 +25,10 @@ router.post("/user/signup", async (request, response) => {
             || request.body.email === undefined
             || request.body.name === undefined
             || request.body.phone === undefined
-            || request.body.address === undefined
-            || request.body.role === undefined) {
+            || request.body.address === undefined) {
             throw new Error("Internal server error");
         }
+
         const data = {
             username: request.body.username,
             password_hash: request.body.password_hash,
@@ -36,7 +36,7 @@ router.post("/user/signup", async (request, response) => {
             name: request.body.name,
             phone: request.body.phone,
             address: request.body.address,
-            role: request.body.role
+            role: "user"
         };
 
         await (async () => {
@@ -55,17 +55,17 @@ router.post("/user/signup", async (request, response) => {
 
         return response.status(200).json({
             success: {
-                status: true,
                 message: "Successfully user signup"
-            }
+            },
+            status: true
         });
     }
     catch (error) {
         return response.status(500).json({
             error: {
-                status: false,
                 message: "Internal server error"
-            }
+            },
+            status: false
         });
     }
 });
